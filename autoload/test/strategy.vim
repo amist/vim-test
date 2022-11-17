@@ -183,6 +183,10 @@ function! test#strategy#harpoon(cmd) abort
   endif
 endfunction
 
+function! test#strategy#clipboard(cmd) abort
+  let @*=a:cmd
+endfunction
+
 function! s:execute_with_compiler(cmd, script) abort
   try
     let default_makeprg = &l:makeprg
